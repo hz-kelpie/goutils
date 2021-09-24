@@ -1,13 +1,14 @@
-package maputils
+package main
 
 import (
 	"fmt"
-	"testing"
 	"time"
+
+	"github.com/hz-kelpie/goutils/maputils"
 )
 
-func Test_Map(t *testing.T) {
-	cache := NewExpiredMap()
+func main() {
+	cache := maputils.NewExpiredMap()
 
 	for i := 1; i <= 10; i++ {
 		cache.Set(i, i, int64(i))
